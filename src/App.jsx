@@ -1,19 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import MNav from './components/MNav';
+import Navigation from './components/Navigation';
 import {
   navdata
 } from './constants';
 import {
   Switch,
   Route,
-  Link
 } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <MNav data={navdata}/>
+      <Navigation data={navdata}/>
       <Switch>
         <Route path="/about">
           <h1>about</h1>
