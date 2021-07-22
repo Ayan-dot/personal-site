@@ -1,0 +1,16 @@
+.modal-content{
+    border-radius: .5rem !important;
+    border: none !important;
+}
+
+.btn-primary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus{
+    background-color: #b4cccb;
+    border: 1px solid #b4cccb;
+    transition: all .5s;
+}
+.btn-secondary, .btn-primary:hover ,.btn-primary:active ,.btn-primary:focus{
+    background-color: transparent;
+    border: #b4cccb 1px solid;
+    color: #b4cccb;
+    transition: all .5s;
+}

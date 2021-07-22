@@ -1,6 +1,21 @@
+.navbar-contain{
+    background-color: rgba(255,255,255,0);
+}
 .navbrand img {
     height: 2rem;    
 }
-.navbar a{
-    text-decoration: underline #b4cccb 2px;
+.navbar a:hover{
+    text-decoration: underline 2px #b4cccb;
+    
+}
+.contact-button{
+    background-color: #b4cccb;
+    border: 1px solid #b4cccb;
+    transition: all .5s;
+}
+.contact-button:hover ,.contact-button:active ,.contact-button:focus{
+    background-color: transparent;
+    border: #b4cccb 1px solid;
+    color: #b4cccb;
+    transition: all .5s;
 }

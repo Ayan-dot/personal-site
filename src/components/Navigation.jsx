@@ -1,31 +1,33 @@
 import React, {} from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import "./Navigation.css";
 
 const Navigation = (props) => {
   const navdata = props.data;
   return (
     <>
-      <Navbar bg="light" expand="lg" className=" navbar p-3 justify-content-between">
-        <Navbar.Brand href="/" className="navbrand nav justify-content-center order-0">
+      <Navbar expand="lg" className="navbar-contain sticky-top pt-2 mb-3">
+        <Navbar.Brand href="/" className="navbrand">
           <img src={navdata.brand.icon} alt="AH" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-auto"/>
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center order-2">
-          <Nav className="justify-content-center">
+        <Navbar.Text className = "">
+           {navdata.brand.label}
+        </Navbar.Text>
+        <Navbar.Toggle data-toggle="collapse" data-target="#basic-navbar-navs" aria-controls="basic-navbar-nav" className="navbar-toggler"/>
+        <Navbar.Collapse id="basic-navbar-nav" className="">
+          <Nav className="">
             {navdata.links.map((x) => (
-              <Nav.Link href={x.href}>{x.name}</Nav.Link>
+              <Nav.Link key={x.name} href={x.href}>{x.name}</Nav.Link>
             ))}
+            <Nav.Link key={'contact'} onClick={()=>{props.change(true)}} className="d-xs-block d-lg-none">contact</Nav.Link>
             <NavDropdown title="links">
               {navdata.socials.map((x) => (
-                <NavDropdown.Item href={x.href}>{x.name}</NavDropdown.Item>
+                <NavDropdown.Item key={x.name} href={x.href}>{x.name}</NavDropdown.Item>
               ))}
             </NavDropdown>
           </Nav>
           </Navbar.Collapse>
-          <Navbar.Text className = "order-1 order-lg-3">
-           {navdata.brand.label}
-          </Navbar.Text>
+            <Button tabIndex="-1" onClick={()=>{props.change(true)}} className="ms-2 contact-button d-none d-lg-block"><span>contact me</span></Button>
       </Navbar>
     </>
   );

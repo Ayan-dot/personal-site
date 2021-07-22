@@ -1,2 +1,4 @@
 import navdata from './navdata';
-export { navdata };
+import footerdata from './footerdata'
+import projects from './projects'
+export { navdata, footerdata, projects };
