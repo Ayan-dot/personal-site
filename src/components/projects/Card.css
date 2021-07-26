@@ -1,17 +1,36 @@
 .card-graphic{
-    height: 20rem;
+    
     width: 20rem;
+    height: 20rem;
     border: 4px solid #b4cccb;
     border-radius: 100%;
     position: relative;
     overflow: hidden;
+    background-size: contain;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
-.card-graphic div{
+.card-graphic .card-graphic-badge{
    background-color: white;
+   border-top: solid #b4cccb 4px;
    position: relative;
    height: 50%;
    width: 100%;
    vertical-align: bottom;
    
+}
+.topic-pill {
+    background-color: rgba(180, 204, 203, 0.6);
+    color: rgb(123, 143, 142);
+    display: inline;
+    padding: 0.2rem;
+    border-radius: 5px ;
+}
+a{
+    color:black;
+    text-decoration: none;
+    text-decoration: underline 2px black; 
+}
+a:hover {  
+   color:black; 
+   text-decoration: underline 2px #b4cccb; 
 }

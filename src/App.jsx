@@ -2,8 +2,9 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
 import Projects from './pages/Projects';
+import About from './pages/About';
 import {
-  navdata, footerdata, projects
+  navdata, footerdata, projects, about
 } from './constants';
 import './global.css';
 import { useState } from 'react';
@@ -20,28 +21,11 @@ const App = () => {
       <Navigation data={navdata} show={showModal} change={onModalShow}/>
       <Popup show={showModal} change={onModalShow}/>
       <Switch>
-        <Route path="/about">
-          <h1>about</h1>
+        <Route exact path={["","/about"]}>
+          <About data={about}/>
         </Route>
         <Route path="/projects">
           <Projects data={projects}/>
-        </Route>
-        <Route path="/resume">
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/>
-        <h1>resume</h1><br/><h1>resume</h1><br/>
-
         </Route>
       </Switch>
       </div>

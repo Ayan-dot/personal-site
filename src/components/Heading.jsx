@@ -10,10 +10,11 @@ export default class Heading extends Component {
     handleCompletion = () => {
             this.setState({
             completed: false,
-        })
+        });
+        console.log('called');
     }
     componentDidMount(){
-        setTimeout(this.handleCompletion, 2300)
+        setTimeout(this.handleCompletion, 2300);
     }
     componentWillUnmount(){
         clearTimeout(this.handleCompletion);
@@ -35,10 +36,11 @@ export default class Heading extends Component {
                 </span>
             </div>
             <div className="row">
-            <div className="h6">
+            <div className="p">
             {this.props.data.body} 
             </div>
         </div>
+        <hr className="mt-2"></hr>
         </>
         )
     }

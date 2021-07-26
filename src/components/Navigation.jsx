@@ -15,7 +15,7 @@ const Navigation = (props) => {
         </Navbar.Text>
         <Navbar.Toggle data-toggle="collapse" data-target="#basic-navbar-navs" aria-controls="basic-navbar-nav" className="navbar-toggler"/>
         <Navbar.Collapse id="basic-navbar-nav" className="">
-          <Nav className="">
+          <Nav className="ms-auto">
             {navdata.links.map((x) => (
               <Nav.Link key={x.name} href={x.href}>{x.name}</Nav.Link>
             ))}
