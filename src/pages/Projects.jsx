@@ -11,6 +11,7 @@ export default class Projects extends Component {
     }
     componentDidMount(){
         fetch(`https://api.github.com/users/${this.props.data.username}/repos?sort=pushed`, {method: 'GET', headers:{'Accept':'application/vnd.github.mercy-preview+json'}}).then(res => res.json()).then(res => this.setState({repos: res})).catch();
+        
     }
     componentWillUnmount(){
 

@@ -17,7 +17,7 @@ const App = () => {
   const [showModal, onModalShow] = useState(false);
   return (
     <>
-    <div className="container-lg mt-5" >
+    <div className="container-md w-75" >
       <Navigation data={navdata} show={showModal} change={onModalShow}/>
       <Popup show={showModal} change={onModalShow}/>
       <Switch>

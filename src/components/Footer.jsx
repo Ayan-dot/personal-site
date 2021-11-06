@@ -5,7 +5,7 @@ class Footer extends Component {
     render() {
     return (
         <>
-        <div className="footer-wrapper container mw-100 mt-5 p-0">
+        <div className="footer-wrapper container mw-100 mt-5 pb-5 pt-5">
             <div className="container-lg mx-auto pt-4">
                 <div className="row d-flex justify-content-between">
                     <div className="col-12 col-md-4 d-flex flex-column justify-content-center">

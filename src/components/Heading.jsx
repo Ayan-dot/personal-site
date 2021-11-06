@@ -11,7 +11,6 @@ export default class Heading extends Component {
             this.setState({
             completed: false,
         });
-        console.log('called');
     }
     componentDidMount(){
         setTimeout(this.handleCompletion, 2300);
