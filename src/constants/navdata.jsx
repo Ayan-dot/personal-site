@@ -3,7 +3,7 @@ const navdata = {
     links: [
         {name: 'about', href: "/about"},
         {name: 'projects', href: "/projects"},
-        {name: 'resume', href: "/files/A_H_1b.pdf"}
+        {name: 'resume', href: "/files/resume.pdf"}
     ],
     socials: [
         {name: 'linkedin', href: 'https://www.linkedin.com/in/ayanhafeez/'},

@@ -1,17 +1,22 @@
-import Navigation from './components/Navigation';
+import './global.css';
+
+import {
+  Route,
+  Switch,
+} from 'react-router-dom';
+import {
+  about,
+  footerdata,
+  navdata,
+  projects
+} from './constants';
+
+import About from './pages/About';
 import Footer from './components/Footer';
+import Navigation from './components/Navigation';
 import Popup from './components/Popup';
 import Projects from './pages/Projects';
-import About from './pages/About';
-import {
-  navdata, footerdata, projects, about
-} from './constants';
-import './global.css';
 import { useState } from 'react';
-import {
-  Switch,
-  Route,
-} from 'react-router-dom';
 
 const App = () => {
   const [showModal, onModalShow] = useState(false);
